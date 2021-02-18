@@ -3,8 +3,14 @@ name: example
 on: push
 
 jobs:
-  job_1:
+  greeting:
     runs-on: ubuntu-latest
     steps:
-#      - name: My first step
-       - run: echo This is the first step of my first job.
+      - run: echo hello world
+  build_skim:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: |
+          COMPILER=$(root-config --cxx)
+          $COMPILER -g -O3 -Wall -Wextra -Wpedantic -o skim skim.cxx
