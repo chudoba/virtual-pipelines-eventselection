@@ -75,7 +75,7 @@ jobs:
       - name: Download from skim
         uses: actions/download-artifact@v2
         with:
-          name: skim_ggH
+          name: skim_ggH.log
       - name: Download from plot
         uses: actions/download-artifact@v2
         with:
